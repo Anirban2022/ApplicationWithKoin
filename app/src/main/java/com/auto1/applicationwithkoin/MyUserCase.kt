@@ -2,7 +2,9 @@ package com.auto1.applicationwithkoin
 
 import org.koin.core.annotation.Factory
 import org.koin.core.annotation.Named
+import org.koin.core.annotation.Single
 
+@Single
 class MyUserCase(
     private val repo: MyRepo
 ) : BaseUseCase<Int, String>() {
@@ -11,4 +13,4 @@ class MyUserCase(
     }
 }
 
-const val MY_USE_CASE = "MY_USE_CASE"
+//const val MY_USE_CASE = "MY_USE_CASE"

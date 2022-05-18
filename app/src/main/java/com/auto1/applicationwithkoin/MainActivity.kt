@@ -23,22 +23,22 @@ class MainActivity : AppCompatActivity() {
         Log.e("###", "onCreate: $res")
     }
 
-    companion object {
-        val mainModule = module {
-            factory {
-                MyViewModel(get(named(MY_USE_CASE)))
-            }
+//    companion object {
+//        val mainModule = module {
+//            factory {
+//                MyViewModel(get(named(MY_USE_CASE)))
+//            }
 //            singleOf(::Repository) {
 //                bind<MyRepo>()
 //                named("MainRepo")
 //            }
-            single(named("MainRepo")) {
-                Repository()
-            } bind MyRepo::class
+//            single(named("MainRepo")) {
+//                Repository()
+//            } bind MyRepo::class
 
-            factory(named(MY_USE_CASE)) {
-                MyUserCase(get(named("MainRepo")))
-            } bind BaseUseCase::class
-        }
-    }
+//            factory(named(MY_USE_CASE)) {
+//                MyUserCase(get(named("MainRepo")))
+//            } bind BaseUseCase::class
+//        }
+//    }
 }
